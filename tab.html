@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Tab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .loading {
+            display: none;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid hsl(160 70% 35%);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .success-msg {
+            display: none;
+        }
+
+        .error-msg {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading" id="loading">
+        <h1>Loading</h1>
+        <p>Please wait while we verify your access.</p>
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <div class="success-msg" id="success-msg" style="display: none">
+        <p>
+            Cyber upgrade develops a proactive guided ICT compliance solution
+            empowering executives gain control over organization's cybersecurity
+            posture. Cyberella, a virtual cyber security agent, delivers team
+            engagement and continuity in cyber routines. Integration with
+            CoreGuardian dashboard provides visibility of whole cybersecurity
+            improvement process.
+        </p>
+        <p>About CyberUpgrade:</p>
+        <a href="https://cyberupgrade.net/about-us/">Cyberupgrade</a>
+    </div>
+
+    <div class="error-msg" id="error-msg" style="display: none">
+        <h1>Access Denied</h1>
+        <p>Unfortunately, you do not have access to this bot or its features.</p>
+        <p>
+            If you believe this is a mistake, or you would like to become our client
+            please contact support:
+        </p>
+        <p>
+            <a href="mailto:support@cyberupgrade.net">support@cyberupgrade.net</a>
+            or visit our
+            <a href="https://cyberupgrade.net/contact-us">Support Center</a>.
+        </p>
+        <p>We’re here to help!</p>
+    </div>
+
+    <script src="https://res.cdn.office.net/teams-js/2.30.0/js/MicrosoftTeams.min.js"></script>
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
